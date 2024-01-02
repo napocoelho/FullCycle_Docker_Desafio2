@@ -2,8 +2,9 @@
 
 <h3>Nginx com Node.js (<i>solução do desafio</i>):</h3>
 
-Utilizar o comando abaixo na pasta raiz do projeto clonado:<br />
-* <b>docker-compose up --build</b>
+Utilizar o comando abaixo na pasta raiz do projeto clonado: <br />
+* <b>docker-compose up --build</b> <br />
+* acessar localhost:8080 para conferir a implementação <br />
 
 
 
