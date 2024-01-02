@@ -1,0 +1,17 @@
+# teste individual do mysql
+
+
+version: "3.3"
+
+services:  
+  mysql-service:
+    image: mysql:5.7
+    command: --innodb-use-native-aio=0
+    container_name: mysql-service
+    restart: always
+    tty: true
+    environment:
+      - MYSQL_DATABASE=nodedb
+      - MYSQL_ROOT_PASSWORD=root    
+    ports:
+      - "3306:3306"

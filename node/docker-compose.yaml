@@ -1,0 +1,14 @@
+# teste isolado do node
+
+version: "3.3"
+
+services:
+
+  node-service:
+    build:
+      context: ./
+    container_name: node-service
+    entrypoint: dockerize -wait tcp://mysql-service:3306 -timeout 20s docker-entrypoint.sh    
+    tty: true
+    ports:
+      - "3000:3000"
