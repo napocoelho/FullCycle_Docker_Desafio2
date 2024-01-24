@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
         con.query(sql, function (err, rows, fields) {
             if (err) throw err;
             
-            const html = `<h1>Full Cycle (DO BIND)!!!</h1>\n
+            const html = `<h1>Full Cycle (*pode alterar o script no host que ele compila sozinho*)!!!</h1>\n
                         <ul>
                             ${rows.map(row => `<li>${row.name}</li>`).join('')}
                         </ul>`

@@ -4,16 +4,18 @@ WORKDIR /usr/src/app
 
 # copiando apenas os arquivos necessários
 COPY *.js* .
-COPY start.sh .
+COPY start.sh /usr/src/
+#COPY ./volume/start.sh /usr/src/
 
 # instalando o wait-for-it, instalando módulos do Node e liberando permissões de arquivos:
 RUN apt-get update && \
     apt-get install -y wget netcat-traditional && \
     wget -q -O /usr/bin/wait-for https://raw.githubusercontent.com/eficode/wait-for/v2.2.3/wait-for && \    
     npm install mysql && \
-    npm install && \
+    npm install nodemon -g && \
+    npm install && \    
     chmod +x /usr/bin/wait-for && \
-    chmod +x start.sh
+    chmod +x /usr/src/start.sh
 
 #USER node
 #WORKDIR /home/node/app
