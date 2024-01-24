@@ -5,6 +5,7 @@
 Utilizar o comando abaixo na pasta raiz do projeto clonado: <br />
 * <b>docker-compose up --build</b> <br />
 * acessar localhost:8080 para conferir a implementação <br />
+* alterar o script dentro da pasta "node/volume", dar F5 na página e o Nodemon fará restart automaticamente no servidor NodeJS <br />
 
 
 
